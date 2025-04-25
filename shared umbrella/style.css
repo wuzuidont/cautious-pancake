@@ -1,0 +1,169 @@
+/* 基础样式 - 与personal.css完全一致 */
+.container {
+    flex: 1;
+    max-width: 600px;
+    width: 100%; /* 保留此项，但需配合 padding 使用 */
+    margin: 0 auto; /* 水平居中 */
+    padding: 15px; /* 控制内容与边缘间距 */
+    box-sizing: border-box; /* 新增：防止 padding 导致宽度溢出 */
+}
+
+body {
+    display: flex; /* 新增关键属性 */
+    flex-direction: column;
+    min-height: 100vh;
+	align-items: center; 
+    margin: 0; /* 移除默认边距 */
+}
+/* 头部样式统一 */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+    font-weight: 500;
+}
+
+.header-icon {
+    font-size: 20px;
+    color: #666;
+    padding: 8px;
+    cursor: pointer;
+}
+
+/* 搜索框样式统一 */
+.search-section {
+    margin-bottom: 20px;
+}
+
+.search-box {
+    background: white;
+    border-radius: 25px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    padding-left: 12px;
+    background: transparent;
+}
+
+.search-icon {
+    color: #999;
+    font-size: 16px;
+}
+
+/* 服务标签统一 */
+.service-tags {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.tag {
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 颜色系统统一 */
+.service { background: #52c41a; }
+.ban { background: #ff4d4f; }
+.placement { background: #1890ff; }
+
+/* 地图容器统一 */
+.map-container {
+    /* 移除 flex:1 */
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    min-height: 300px;
+}
+
+.map-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 操作按钮统一 */
+.action-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+	margin-top: auto; /* 将按钮组推至容器底部 */
+}
+
+.btn {
+    padding:15px;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+}
+
+.btn-icon {
+    font-size: 18px;
+}
+
+.scan-btn { background: #1890ff; }
+.code-btn { background: #52c41a; }
+
+/* 交互状态统一 */
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* 响应式统一 */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .main-header {
+        padding: 12px 15px;
+    }
+    
+    .tag {
+        font-size: 13px;
+        padding: 10px;
+    }
+    
+    .btn {
+        font-size: 14px;
+        padding: 14px;
+    }
+    
+    .search-box input {
+        font-size: 14px;
+    }
+}

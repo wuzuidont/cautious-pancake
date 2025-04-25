@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>共享雨伞</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <header class="main-header">
+            <a href="person.html" class="header-icon human-icon">👤</a>
+            <h1>共享雨伞</h1>
+            <i class="fas fa-bars header-icon"></i>
+        </header>
+
+        <!-- 搜索区 -->
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" placeholder="搜索目的地是否有雨伞">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+        </div>
+
+        <!-- 服务标签 -->
+        <div class="service-tags">
+            <div class="tag service">服务区</div>
+            <div class="tag ban">禁放区</div>
+            <div class="tag placement">放置区</div>
+        </div>
+
+        <!-- 地图区域 -->
+        <div class="map-container">
+            <img src="地图.jpg" alt="雨伞分布" class="map-image">
+        </div>
+
+        <!-- 操作按钮 -->
+        <div class="action-buttons">
+            <button class="btn scan-btn">
+                <i class="fas fa-qrcode btn-icon"></i>
+                扫码用伞
+            </button>
+            <button class="btn code-btn">
+                <i class="fas fa-keyboard btn-icon"></i>
+                输入编码
+            </button>
+        </div>
+    </div>
+</body>
+</html>
